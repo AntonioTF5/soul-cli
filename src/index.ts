@@ -91,7 +91,7 @@ program
     if (opts.json) {
       process.stdout.write(
         JSON.stringify(
-          { file, score: scoreResult.score, ...scoreResult },
+          { file, ...scoreResult },
           null,
           2
         ) + "\n"
