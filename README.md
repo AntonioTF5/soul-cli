@@ -1,13 +1,13 @@
-# soul-cli
+# soul-md-cli
 
-[![npm version](https://img.shields.io/npm/v/soul-cli)](https://www.npmjs.com/package/soul-cli)
-[![npm downloads](https://img.shields.io/npm/dw/soul-cli)](https://www.npmjs.com/package/soul-cli)
+[![npm version](https://img.shields.io/npm/v/soul-md-cli)](https://www.npmjs.com/package/soul-md-cli)
+[![npm downloads](https://img.shields.io/npm/dw/soul-md-cli)](https://www.npmjs.com/package/soul-md-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 CLI validator, scorer, and generator for [SOUL.md](https://github.com/AntonioTF5/soul-spec) agent identity files.
 
 ```
-npx soul-cli validate my-agent.soul.md
+npx soul-md-cli validate my-agent.soul.md
 ```
 
 ---
@@ -16,7 +16,7 @@ npx soul-cli validate my-agent.soul.md
 
 ```bash
 # Run without installing
-npx soul-cli <command>
+npx soul-md-cli <command>
 
 # Install globally
 npm install -g soul-cli
@@ -31,7 +31,7 @@ npm install -g soul-cli
 Validates a `.soul.md` file against the SOUL.md schema. Exits 0 on pass, 1 on fail.
 
 ```
-$ npx soul-cli validate marcus-aurelius.soul.md
+$ npx soul-md-cli validate marcus-aurelius.soul.md
 
   ✓ PASS  marcus-aurelius.soul.md
   Agent:   Marcus Aurelius
@@ -39,7 +39,7 @@ $ npx soul-cli validate marcus-aurelius.soul.md
 ```
 
 ```
-$ npx soul-cli validate broken.soul.md
+$ npx soul-md-cli validate broken.soul.md
 
   ✗ FAIL  broken.soul.md
   Agent:   (missing)
@@ -53,7 +53,7 @@ $ npx soul-cli validate broken.soul.md
 Machine-readable output:
 
 ```
-$ npx soul-cli validate marcus-aurelius.soul.md --json
+$ npx soul-md-cli validate marcus-aurelius.soul.md --json
 {
   "pass": true,
   "file": "marcus-aurelius.soul.md",
@@ -70,7 +70,7 @@ $ npx soul-cli validate marcus-aurelius.soul.md --json
 Shows a completeness score (0–100) based on optional fields filled.
 
 ```
-$ npx soul-cli score marcus-aurelius.soul.md
+$ npx soul-md-cli score marcus-aurelius.soul.md
 
   marcus-aurelius.soul.md  90%  █████████░
 
@@ -95,7 +95,7 @@ $ npx soul-cli score marcus-aurelius.soul.md
 Interactive soul file generator. Prompts for name, description, personality, and tone, then writes a `.soul.md` file.
 
 ```
-$ npx soul-cli init
+$ npx soul-md-cli init
 
   SOUL.md generator
 
@@ -106,22 +106,22 @@ $ npx soul-cli init
   Output filename [debate-coach.soul.md]:
 
   ✓ Created debate-coach.soul.md
-  Validate: soul-cli validate debate-coach.soul.md
-  Score:    soul-cli score debate-coach.soul.md
+  Validate: soul-md-cli validate debate-coach.soul.md
+  Score:    soul-md-cli score debate-coach.soul.md
   Deploy:   https://agenturo.app
 ```
 
 Non-interactive mode:
 
 ```bash
-npx soul-cli init --name "Debate Coach" --no-interactive
+npx soul-md-cli init --name "Debate Coach" --no-interactive
 ```
 
 ---
 
 ## Deploy to Agenturo
 
-[Agenturo](https://agenturo.app) is the reference SOUL.md implementation. Create a soul file with `soul-cli init`, then deploy it as a live AI agent on your own subdomain (`you.agenturo.app`) — no code required.
+[Agenturo](https://agenturo.app) is the reference SOUL.md implementation. Create a soul file with `soul-md-cli init`, then deploy it as a live AI agent on your own subdomain (`you.agenturo.app`) — no code required.
 
 ---
 

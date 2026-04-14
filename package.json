@@ -1,9 +1,10 @@
 {
-  "name": "soul-cli",
+  "name": "soul-md-cli",
   "version": "1.0.0",
   "description": "CLI validator, scorer, and generator for SOUL.md agent identity files.",
   "main": "dist/index.js",
   "bin": {
+    "soul-md-cli": "./dist/index.js",
     "soul-cli": "./dist/index.js"
   },
   "scripts": {
