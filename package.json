@@ -1,0 +1,49 @@
+{
+  "name": "soul-cli",
+  "version": "1.0.0",
+  "description": "CLI validator, scorer, and generator for SOUL.md agent identity files.",
+  "main": "dist/index.js",
+  "bin": {
+    "soul-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "dev": "ts-node src/index.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "soul-md",
+    "ai-agents",
+    "llm",
+    "agent-identity",
+    "validator",
+    "cli"
+  ],
+  "author": "Anton Agafonov <anton@agenturo.app>",
+  "license": "MIT",
+  "homepage": "https://github.com/AntonioTF5/soul-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonioTF5/soul-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AntonioTF5/soul-cli/issues"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
